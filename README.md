@@ -61,11 +61,8 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "description": "Самокат не в сети",
-  "source": "unknown"
-}'
-curl -X POST http://localhost:8000/incidents \
-  -H "Content-Type: application/json" \
-  -d '{"description": "Самокат не в сети", "source": "monitoring"}'
+  "source": "monitoring"
+  }'
 ```
 
 Изменение статуса инцидента на resolved
@@ -75,4 +72,5 @@ curl -X 'PATCH' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{"status": "resolved"}'
+
 ```
